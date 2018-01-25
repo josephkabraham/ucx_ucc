@@ -25,6 +25,7 @@ require('./typing');
 require('./ucc_webrtc');
 require('./tone_generator');
 require('./device_manager');
+require('./alerting');
 require('./chat_tooltip');
 
 window.moment = require('moment');
