@@ -27,9 +27,9 @@ defmodule UcxUccWeb.LandingView do
     end,
     content_tag :p do
       ~g(The host name used to access this page is displayed below. The default can
-          be used if it is the name/address for production service.
-          However, if the plan is to use another address, e.g. external host name,
-          please enter it below.)
+         be used if it is the name/address for production service.
+         However, if the plan is to use another address, e.g. external host name,
+         please enter it below.)
     end]
   end
 
@@ -117,6 +117,14 @@ defmodule UcxUccWeb.LandingView do
       content_tag(:strong, do: ~g(RESTART THE SERVER)),
       ~g( button. The application restart takes approximately one minute to complete.
         After restart, login as administrator and invite users as described below.)
+    ]
+  end
+
+  def welcome_message do
+    [
+      gettext("""
+        Welcome to %{brand}!
+        """, brand: UcxUcc.brandname)
     ]
   end
 end
